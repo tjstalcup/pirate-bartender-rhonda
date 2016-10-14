@@ -37,3 +37,10 @@ $(function() {
     });
 
 });
+
+
+function getRandomIngredient(ingredients){
+	//get random number
+	// var randomNumber = Math.rand()
+	// return ingredients[randomNumber];
+}
