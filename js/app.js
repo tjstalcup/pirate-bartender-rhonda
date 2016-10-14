@@ -1,5 +1,5 @@
 var questions = [{
-				type: 'strong',
+        type: 'strong',
         title: 'Do ye like yer drinks strong?',
         ingredients: ['Glug of rum', 'Slug of whisky', 'Splash of gin']
     },
@@ -12,35 +12,35 @@ var questions = [{
 
 $(function() {
     questions.map(function(question) {
-        $('.questions').prepend('<p>' + question.title + 
-        	' <input name="'+question.type+'" type="radio" value="true" checked/>Yes ' + 
-        	' <input name="'+question.type+'" type="radio" value="false"/>No </p>');
+        $('.questions').prepend('<p>' + question.title +
+            ' <input name="' + question.type + '" type="radio" value="true" checked/>Yes ' +
+            ' <input name="' + question.type + '" type="radio" value="false"/>No </p>');
     });
 
-    $('.questions').on('click','.submit',function(){
-    	var ingredients = [];
-    	questions.map(function(question){
-    		if($('input[name="'+question.type+'"]:checked').val()=='true'){
-    			ingredients.push(question.ingredients[0]);
-    		}
-    	});
+    $('.questions').on('click', '.submit', function() {
+        var ingredients = [];
+        questions.map(function(question) {
+            if ($('input[name="' + question.type + '"]:checked').val() == 'true') {
+                ingredients.push(question.ingredients[0]);
+            }
+        });
 
-    	var drinkMix = "";
-    	ingredients.map(function(ingredient,i){
-    		if(i!==0){
-    			drinkMix += " with a ";
-    		}
-    		drinkMix += ingredient;
-    	});
+        var drinkMix = "";
+        ingredients.map(function(ingredient, i) {
+            if (i !== 0) {
+                drinkMix += " with a ";
+            }
+            drinkMix += ingredient;
+        });
 
-    	$('.drink-mix').html(drinkMix);
+        $('.drink-mix').html(drinkMix);
     });
 
 });
 
 
-function getRandomIngredient(ingredients){
-	//get random number
-	// var randomNumber = Math.rand()
-	// return ingredients[randomNumber];
+function getRandomIngredient(ingredients) {
+    //get random number
+    // var randomNumber = Math.rand()
+    // return ingredients[randomNumber];
 }
