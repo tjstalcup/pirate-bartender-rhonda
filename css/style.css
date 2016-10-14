@@ -1,0 +1,22 @@
+body {
+	background-image: url('../images/pirateship-bar.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.questions {
+	width: 50%;
+	margin: 0 auto;
+	background-color: rgba(255,255,255,0.75);
+	padding: 50px;
+	margin-top: 200px;
+}
+
+.drink-mix {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 50px;
+	background-color: rgba(255,255,255,0.75);
+	padding: 50px;
+	font-size: 1.5em;
+}
